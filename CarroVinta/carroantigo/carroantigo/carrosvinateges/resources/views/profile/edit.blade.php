@@ -23,11 +23,11 @@
 
 
 
-    <div style="padding-top: 3rem; padding-bottom: 3rem; background-color: #001e2d;">
+    <div style="padding-top: 3rem; padding-bottom: 3rem; background-color: #003149;">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-10">
 
             {{-- Informações do Perfil --}}
-            <div style="padding: 24px; background-color: rgb(0, 49, 73); box-shadow: 0 0 10px rgba(0,0,0,0.15); border-radius: 12px; border: 1px solid #ccc;">
+            <div style="padding: 24px; background-color: #172872; box-shadow: 0 0 10px rgba(0,0,0,0.15); border-radius: 12px; border: 1px solid #ccc;">
                 <h3 style="font-size: 1.25rem; font-weight: 600; color: #ffffff; margin-bottom: 1rem;">
                     Informações Pessoais
                 </h3>
@@ -36,7 +36,7 @@
                 </div>
             </div>
 
-            <div style="padding: 24px; background-color: #003149; box-shadow: 0 0 10px rgba(0,0,0,0.15); border-radius: 12px; border: 1px solid #ccc; margin-top: 2rem;">
+            <div style="padding: 24px; background-color: #172872; box-shadow: 0 0 10px rgba(0,0,0,0.15); border-radius: 12px; border: 1px solid #ccc; margin-top: 2rem;">
                 <h3 style="font-size: 1.25rem; font-weight: 600; color: #ffffff; margin-bottom: 1rem;">
                     Segurança da Conta
                 </h3>
