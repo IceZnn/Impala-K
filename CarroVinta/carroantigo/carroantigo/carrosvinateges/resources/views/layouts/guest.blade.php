@@ -20,7 +20,7 @@
                 background-attachment: fixed;
             }
             .login-card {
-                background: rgba(255, 255, 255, 0.9);
+                background: rgba(230, 243, 252, 0.9);
                 backdrop-filter: blur(10px);
                 border-radius: 1rem;
                 box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
