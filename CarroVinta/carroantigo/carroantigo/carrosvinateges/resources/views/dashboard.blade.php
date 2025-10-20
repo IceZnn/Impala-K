@@ -149,7 +149,7 @@
                     <div class="list-group-item p-4">
                         <div class="row align-items-center">
                             <div class="col-auto">
-                                <img src="cosrei.jpg" class="rounded-circle shadow" width="60" height="60" alt="Ayanami">
+                                <img src="cosrei.jpg" class="rounded-circle shadow" width="50" height="50" alt="Ayanami">
                             </div>
                             <div class="col">
                                 <h6 class="mb-1 fw-bold text-dark">Ayanami</h6>
@@ -159,7 +159,7 @@
                                 </small>
                             </div>
                             <div class="col-auto text-end">
-                                <span class="badge bg-primary rounded-pill px-3 py-2">R$ 2.500.000</span>
+                                <span class="badge bg-primary rounded-pill px-3 py-2">R$ 45.500.000.000</span>
                                 <div class="text-muted small mt-1">
                                     <i class="fas fa-clock me-1"></i>00:00
                                 </div>
