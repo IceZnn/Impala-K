@@ -64,7 +64,7 @@ class ProfileController extends Controller
 
         $carros = produtos::where('Nome','like','%monza%')->get()->all();
 
-       // $carros = produtos::where('nome','LIKE','%'.$request->nome. '%' );
+        //$carros = produtos::where('nome','LIKE','%'.$request->nome. '%' );
 
       return view('carros')->with('carros',$carros);
 

@@ -82,11 +82,52 @@ class produtosController extends Controller
     }
 
 
-
-
-
-
+    public function index(Request $request)
+    {
+        $query = Produto::query();
+        
+        // Filtro por busca
+        if ($request->has('search') && $request->search != '') {
+            $query->where('Nome', 'like', '%' . $request->search . '%');
+        }
+        
+        // Filtro por ano
+        if ($request->has('ano') && $request->ano != '') {
+            $query->where('Ano', $request->ano);
+        }
+        
+        // Filtro por vendedor
+        if ($request->has('vendedor') && $request->vendedor != '') {
+            $query->where('Vendedor', 'like', '%' . $request->vendedor . '%');
+        }
+        
+        // Ordenação
+        switch ($request->sort) {
+            case 'antigos':
+                $query->orderBy('created_at', 'asc');
+                break;
+            case 'nome_asc':
+                $query->orderBy('Nome', 'asc');
+                break;
+            case 'nome_desc':
+                $query->orderBy('Nome', 'desc');
+                break;
+            default: // novos
+                $query->orderBy('created_at', 'desc');
+                break;
+        }
+        
+        $produto = $query->paginate(10);
+        
+        return view('sua-view', compact('produto'));
+    }
 }
+    
+
+
+
+
+
 
 
 
