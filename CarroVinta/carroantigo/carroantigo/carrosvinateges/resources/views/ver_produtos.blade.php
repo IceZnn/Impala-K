@@ -85,7 +85,7 @@
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" id="animacaoFiltro" checked>
                                         <label class="form-check-label text-muted small" for="animacaoFiltro">
-                                            Animação suave
+                                        Apenas priorizar a pesquisa?
                                         </label>
                                     </div>
                                 </div>
@@ -371,7 +371,7 @@
 
                 // Atualizar contador
                 totalVisiveisSpan.textContent = visiveis;
-
+                //teste
                 // Mostrar/ocultar mensagem de sem resultados
                 if (visiveis === 0) {
                     semResultados.classList.remove('d-none');
