@@ -163,8 +163,8 @@
                                 <i class="fas fa-calendar me-1"></i> 
                                 {{ $p->created_at->format('d/m/Y H:i') }}
                             </small>
-                            <button class="btn btn-primary btn-sm rounded-pill px-3">
-                                <i class="fas fa-shopping-cart me-1"></i> Comprar
+                            <button class="btn btn-primary btn-sm rounded-pill px-3" onclick="abrirNegociacao()">
+                                <i class="fas fa-shopping-cart me-1"></i> Negociar
                             </button>
                         </div>
                     </div>
@@ -281,7 +281,7 @@
             transform: scale(1);
         }
     </style>
-
+    
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const searchInput = document.getElementById('search');
@@ -421,8 +421,53 @@
             // Inicializar
             aplicarFiltros();
         });
-    </script>
 
+        function abrirNegociacao() {
+        Swal.fire({
+            title: 'Fazer Oferta',
+            html: `
+                <div class="text-start">
+                    <div class="mb-3">
+                        <label class="form-label">Valor da Oferta:</label>
+                        <input type="number" id="oferta" class="form-control" placeholder="Digite seu valor">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Mensagem (opcional):</label>
+                        <textarea id="mensagem" class="form-control" rows="3" placeholder="Digite sua mensagem..."></textarea>
+                    </div>
+                </div>
+            `,
+            icon: 'info',
+            showCancelButton: true,
+            confirmButtonText: 'Enviar Oferta',
+            cancelButtonText: 'Cancelar',
+            preConfirm: () => {
+                const oferta = document.getElementById('oferta').value;
+                const mensagem = document.getElementById('mensagem').value;
+                
+                    if (!oferta) {
+                        Swal.showValidationMessage('Por favor, digite um valor para a oferta');
+                        return false;
+                    }
+                
+                    return { oferta: oferta, mensagem: mensagem };
+                }
+            }).then((result) => {
+                if (result.isConfirmed) {
+                // Aqui você processa a oferta
+                    console.log('Oferta:', result.value);
+                
+                 Swal.fire(
+                        'Oferta Enviada!',
+                        `Sua oferta de R$ ${result.value.oferta} foi enviada com sucesso!`,
+                        'success'
+                    );
+                }
+            });
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
     <div style="height: 100px;"></div>
     @include('components.footer')
 </x-app-layout>
