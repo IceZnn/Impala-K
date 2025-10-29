@@ -60,7 +60,21 @@
                                            placeholder="Ex: Chevrolet Impala 1967" required>
                                 </div>
                             </div>
-
+                            
+                            <div class="mb-4">
+                                <label for="imagem" class="form-label fw-semibold text-dark mb-3">
+                                    <i class="fas fa-tag me-2 text-primary"></i>
+                                    Imagem do veículo
+                                </label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light border-end-0">
+                                        <i class="fas fa-null text-primary"></i>
+                                    </span>
+                                    <input type="text" name="imagem" id="imagem" 
+                                           class="form-control form-control-lg border-start-0"
+                                           placeholder="Digite a imagem" required>
+                                </div>
+                            </div>
                             <!-- Ano do Veículo -->
                             <div class="mb-4">
                                 <label for="Ano" class="form-label fw-semibold text-dark mb-3">

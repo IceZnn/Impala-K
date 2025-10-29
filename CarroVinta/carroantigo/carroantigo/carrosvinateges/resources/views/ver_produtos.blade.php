@@ -102,6 +102,7 @@
             <div class="col-lg-6 col-md-8 col-sm-12 produto-card" 
                  data-nome="{{ strtolower($p->Nome) }}"
                  data-ano="{{ $p->Ano }}"
+                 data-imagem="{{ $p->imagem }}"
                  data-vendedor="{{ strtolower($p->Vendedor) }}"
                  data-data="{{ $p->created_at->timestamp }}">
                 <div class="card shadow-lg border-0 rounded-4 h-100 news-card" style="background: rgba(157, 203, 225, 0.8); backdrop-filter: blur(10px);">
@@ -112,9 +113,10 @@
                                 <i class="fas fa-car me-2"></i>{{ $p->Nome }}
                             </h5>
                             <span class="badge bg-light text-primary fs-6">{{ $p->Ano }}</span>
+                            
                         </div>
                     </div>
-
+                    
                     <div class="card-body d-flex flex-column">
                         <div class="d-flex align-items-center mb-3">
                             <div class="avatar-placeholder rounded-circle d-flex align-items-center justify-content-center me-3"
@@ -126,7 +128,13 @@
                                 <small class="text-muted">Vendedor</small>
                             </div>
                         </div>
-
+                        
+                        <div class=" rounded-3 p-2 bg-blue " style="height: 400px;">
+                            <img src="{{ asset($p->imagem) }}" alt="" 
+                                class="img-fluid h-100 w-100" style="object-fit: contain;">
+                        </div>
+                        <div style="height: 10px"></div>
+                        
                         <div class="description-container flex-grow-1">
                             <h6 class="text-primary fw-semibold mb-2">
                                 <i class="fas fa-file-alt me-2"></i>Descrição:
