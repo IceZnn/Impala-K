@@ -50,6 +50,19 @@
                                 </div>
                             </div>
 
+                            <div class="mb-4">
+                                <label for="imagem" class="form-label fw-semibold text-dark">
+                                    <i class="fas fa-tag me-2 text-primary"></i>Imagem
+                                </label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light border-end-0">
+                                        <i class="fas fa-tag text-primary"></i>
+                                    </span>
+                                    <input type="img" name="imagem" value="{{$produto->imagem}}" id="imagem" 
+                                        class="form-control form-control-lg border-start-0" 
+                                        placeholder="Imagem" required>
+                                </div>
+                            </div>
                             <!-- Ano -->
                             <div class="mb-4">
                                 <label for="Ano" class="form-label fw-semibold text-dark">

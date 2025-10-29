@@ -16,6 +16,7 @@ class produtosController extends Controller
         $produto->estado = $request->input('estado');
         $produto->Vendedor = $request->input('Vendedor');
         $produto->Ano = $request->input('Ano');
+        $produto->imagem = $request->input('imagem');
         $produto->save();
 
         return redirect('/dashboard')->with('success', 'Produto cadastrado com sucesso!');
@@ -48,6 +49,7 @@ class produtosController extends Controller
         $produto->estado = $request->input('estado');
         $produto->Vendedor = $request->input('Vendedor');
         $produto->Ano = $request->input('Ano');
+        $produto->imagem = $request->input('imagem');
         $produto->save();
 
         return redirect('/dashboard');
@@ -78,7 +80,7 @@ class produtosController extends Controller
 
     public function formulario()
     {
-    return view('formulario'); // Certifique-se de que a view 'formulario.blade.php' existe em resources/views
+    return view('formulario'); 
     }
 
 

@@ -24,7 +24,7 @@
                         <span class="visually-hidden">Twitter</span>
                         <i class="fab fa-twitter fa-lg"></i>
                     </a>
-                    <a href="#" class="text-light hover-primary" style="transition: color 0.3s;">
+                    <a href="https://github.com/IceZnn/Impala-K" class="text-light hover-primary" style="transition: color 0.3s;">
                         <span class="visually-hidden">GitHub</span>
                         <i class="fab fa-github fa-lg"></i>
                     </a>

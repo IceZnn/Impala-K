@@ -13,6 +13,7 @@ class produtos extends Model
             'estado',
             'Vendedor',
             'Ano',
+            'imagem',
 
     ];
 }
